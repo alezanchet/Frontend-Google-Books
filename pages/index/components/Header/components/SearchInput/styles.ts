@@ -9,5 +9,19 @@ export const styles = StyleSheet.create({
     maxWidth: 550,
     position: 'absolute',
     bottom: -25,
+    flexDirection: 'row',
+  },
+
+  input: {
+    flex: 1,
+    paddingHorizontal: 20,
+    fontSize: 14,
+  },
+
+  button: {
+    height: 55,
+    width: 55,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

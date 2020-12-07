@@ -2,8 +2,6 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
-import SearchInput from './components/SearchInput';
-
 import { styles } from './styles';
 
 const Header: React.FC = () => {
@@ -23,7 +21,6 @@ const Header: React.FC = () => {
           </View>
         </View>
       </View>
-      <SearchInput />
     </View>
   );
 };

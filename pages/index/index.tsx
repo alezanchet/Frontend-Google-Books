@@ -1,22 +1,49 @@
-// @generated: @expo/next-adapter@2.1.0
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, FlatList, Text } from 'react-native';
 
-export default function App() {
+import Header from './components/Header';
+
+import { styles } from './styles';
+
+const index: React.FC = () => {
+  const data = [
+    {
+      name: 'a',
+    },
+    {
+      name: 'b',
+    },
+    {
+      name: 'c',
+    },
+    {
+      name: 'd',
+    },
+    {
+      name: 'e',
+    },
+  ];
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Welcome to Expo + Next.js 👋</Text>
+      <View style={styles.listContainer}>
+        {data.map((book) => (
+          <View
+            style={{
+              height: 200,
+              width: '40%',
+              maxWidth: 260,
+              backgroundColor: 'black',
+              marginTop: 10,
+            }}
+          >
+            <Text style={{ color: 'white' }}>{book.name}</Text>
+          </View>
+        ))}
+      </View>
+      <Header />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 16,
-  },
-});
+export default index;

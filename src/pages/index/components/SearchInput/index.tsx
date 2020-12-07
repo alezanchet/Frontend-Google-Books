@@ -1,10 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import {
-  View,
-  TextInput,
-  TouchableOpacity,
-  TextInputProps,
-} from 'react-native';
+import { View, TextInput, TextInputProps } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 import { styles } from './styles';

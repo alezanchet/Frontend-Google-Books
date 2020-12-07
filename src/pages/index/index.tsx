@@ -4,7 +4,7 @@ import { AntDesign } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-community/async-storage';
 import Hoverable from '../../Hoverable';
 
-import Footer from '../components/footer';
+import Footer from '../../components/footer';
 
 import Header from './components/Header';
 import SearchInput from './components/SearchInput';

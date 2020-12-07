@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import Link from 'next/link';
 
 import { styles } from './styles';
 
@@ -32,18 +33,27 @@ const Footer: React.FC<FooterProps> = ({ currentPage }) => {
   return (
     <View style={styles.container}>
       <View style={styles.contentContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Feather name="menu" size={24} color={colorList} />
-          <Text style={[styles.textButton, { color: colorList }]}>
-            Listagem
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Feather name="heart" size={24} color={colorFav} />
-          <Text style={[styles.textButton, { color: colorFav }]}>
-            Favoritos
-          </Text>
-        </TouchableOpacity>
+        <Link href="/">
+          <TouchableOpacity style={styles.button}>
+            <Feather name="menu" size={24} color={colorList} />
+            <Text style={[styles.textButton, { color: colorList }]}>
+              Listagem
+            </Text>
+          </TouchableOpacity>
+        </Link>
+        <Link href="/favoritos">
+          <TouchableOpacity
+            onPress={() => {
+              console.log('fav');
+            }}
+            style={styles.button}
+          >
+            <Feather name="heart" size={24} color={colorFav} />
+            <Text style={[styles.textButton, { color: colorFav }]}>
+              Favoritos
+            </Text>
+          </TouchableOpacity>
+        </Link>
       </View>
     </View>
   );

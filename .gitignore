@@ -10,6 +10,14 @@ npm-debug.*
 *.orig.*
 web-build/
 web-report/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
 
 # debug
 yarn-debug.log*
